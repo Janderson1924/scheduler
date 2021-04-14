@@ -174,7 +174,7 @@ storiesOf("Appointment", module)
     <Form
       name="Justin Anderson"
       interviewers={interviewers}
-      interviewer={interviewers.id}
+      interviewer={interviewer.id}
       onSave={action("onSave")}
       onCancel={action("onCancel")}
     />
