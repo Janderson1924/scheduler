@@ -12,8 +12,8 @@ export default function InterviewerList(props) {
       selected={interviewer.id === props.interviewer}
       setInterviewer={event => props.setInterviewer(interviewer.id)}
       />
-    )
-  })
+    );
+  });
 
   return (
     <section className="interviewers">
@@ -21,4 +21,4 @@ export default function InterviewerList(props) {
       <ul className="interviewers__list">{listOfInterviewers}</ul>
     </section>
   );
-}
+};
