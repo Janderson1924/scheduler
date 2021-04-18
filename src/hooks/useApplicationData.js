@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function useApplicationData() {
-  
   const [state, setState] = useState({
     day: "Monday",
     days: [],
@@ -21,7 +20,6 @@ export default function useApplicationData() {
       ...state.appointments,
       [id]: appointment,
     };
-    console.log(id, interview);
     setState({
       ...state,
       appointments,
@@ -30,12 +28,19 @@ export default function useApplicationData() {
   }
 
   function cancelInterview(id) {
-    const interview = { ...state.appointments[id].interview };
+    const appointment = {
+      ...state.appointments[id],
+      interview: null,
+    };
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment,
+    };
     setState({
       ...state,
-      interview,
+      appointments,
     });
-    return axios.delete(`api/appointments/${id}`, { interview });
+    return axios.delete(`/api/appointments/${id}`, { interview: null });
   }
 
   useEffect(() => {
