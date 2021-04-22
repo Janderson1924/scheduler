@@ -1,23 +1,13 @@
 # Interview Scheduler
 
-## Setup
+Interview Scheduler is a React App built for the purposes of learning React! In this application, anyone can create, edit, and delete appointments while also being able to dynamically view the available days/spots remaining for all days!
 
-Install dependencies with `npm install`.
+## Getting Started
 
-## Running Webpack Development Server
+1. Go to [this repo](https://github.com/Janderson1924/scheduler-api) and fork and clone, then follow README instructions, this will be the DATABASE.
+2. In a seperate folder (APP), fork the above repository, then clone your fork of the repository.
+3. In the APP folder, install dependencies using the `npm install` command.
+4. In the DATABASE folder, install dependencies using the `npm install` command.
+5. Start the database server using the `npm start` command in the DATABASE folder.
+6. Start the App using the `npm start` command in the APP folder. The app will be served at <http://localhost:8080/>. Once the server has started, it should open up in a new tab in your local browser.
 
-```sh
-npm start
-```
-
-## Running Jest Test Framework
-
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
-```
